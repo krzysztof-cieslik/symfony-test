@@ -1,11 +1,53 @@
 import React from 'react';
+import img from '../../img/amp.png';
+import {useEffect,useState} from 'react';
 
 export default function (props) {
-    return <div class="container">
-    <div class="row">
-        <div class="col">Siemaa</div>
-     
-       
+    const [navbarImageCollapsed, setNavbarImageCollapsed] = useState(false)
+    useEffect(() => {
+        const handleScroll = event => {
+            if (window.scrollY > 50) {
+                setNavbarImageCollapsed(true)
+              } else {
+                setNavbarImageCollapsed(false)
+              }
+          console.log('window.scrollY', window.scrollY);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+    return (
+
+        <div className="main-Container">
+  
+    <div className="top-Navigation">
+    
+    <div className="logo">
+        <a href="#"><img className={`amp ${navbarImageCollapsed ? 'amp-collapsed' : ''}`} src={img} alt="John Leggy"/></a>
     </div>
-</div>;
+       
+       
+       <div className="hamburger-menu">
+    <input id="menu_toggle" type="checkbox" />
+    <label className="menu_btn" for="menu_toggle">
+      <span></span>
+    </label>
+
+    <ul className="menu_box">
+      <li><a className="menu_item" href="#">Home</a></li>
+      <li><a className="menu_item" href="#">About</a></li>
+      <li><a className="menu_item" href="#">Team</a></li>
+      <li><a className="menu_item" href="#">Contact</a></li>
+      <li><a className="menu_item" id="last_element_menu_item" href="#">Twitter</a></li>
+    </ul>
+  </div>
+
+    </div>
+</div>
+    )
 }
+
