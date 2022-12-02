@@ -5,16 +5,19 @@ body,html {
     height: 150%;
     width: 100%;
     
+    
 }
 .main-Container{
+  display: flex;
   height: 100%;
   width: 100%;
+
 }
 .top-Navigation {
     background-color:burlywood;
     display: flex;
     width: 100%;
-    position: fixed;
+    top: 0;
   }
   
   .logo {
@@ -117,3 +120,22 @@ body,html {
     border-bottom: 2px solid rgba(128, 128, 128, 0.2);
   }
   
+.Header-Container{
+  display: inline-flex;
+  width: 65%;
+  background-color: burlywood;
+  margin: auto;
+
+   
+}
+.header-text{
+  color:white;
+  font-family: 'Roboto' ,sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: none;
+  border-left: 10px solid #fff;
+  padding-left: 30px;
+  padding-top: 20px;
+
+}

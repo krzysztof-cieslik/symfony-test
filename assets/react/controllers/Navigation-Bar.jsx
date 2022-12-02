@@ -45,9 +45,12 @@ export default function (props) {
       <li><a className="menu_item" id="last_element_menu_item" href="#">Twitter</a></li>
     </ul>
   </div>
+ 
 
     </div>
+    
 </div>
+
     )
 }
 
