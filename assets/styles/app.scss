@@ -1,119 +1,150 @@
+body,
+html {
+  background-color: lightgray;
+  margin: 0;
+  height: 150%;
+  width: 100%;
 
-body,html {
-    background-color: lightgray;
-    margin: 0;
-    height: 150%;
-    width: 100%;
-    
 }
-.main-Container{
+
+.main-Container {
   height: 100%;
   width: 100%;
 }
+
 .top-Navigation {
-    background-color:burlywood;
-    display: flex;
-    width: 100%;
-    position: fixed;
-  }
-  
-  .logo {
-    width: 50%;
-    padding-top: 14px;
-    padding-left: 14px;
-  }
-  .amp{
-   
-    width: 400px;
-    transition: 0.4s;
-  }
-  .amp-collapsed{
-    width: 200px;
-    transition: 0.4s;
-  }
-.hamburger-menu{
+  background-color: burlywood;
+  display: flex;
+  width: 100%;
+  position: fixed;
+}
+
+.logo {
+  width: 50%;
+  padding-top: 14px;
+  padding-left: 14px;
+}
+
+.amp {
+  width: 400px;
+  transition: 0.4s;
+}
+
+.amp-collapsed {
+  width: 200px;
+  transition: 0.4s;
+}
+
+.hamburger-menu {
   width: 50%;
   display: flex;
   align-items: center;
   margin-right: 24px;
   justify-content: flex-end;
+
+  .menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
 }
-  
-  #menu_toggle {
-    opacity: 0;
-   
-  }
-  #menu_toggle:checked + .menu_btn > span {
-    transform: rotate(45deg);
-  }
-  #menu_toggle:checked + .menu_btn > span::before {
-    top: 0;
-    transform: rotate(0deg);
-  }
-  #menu_toggle:checked + .menu_btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  #menu_toggle:checked ~ .menu_box {
-    right: 0 !important;
-  }
-  .menu_btn {
-    
-    width: 35px;
-    height: 29px;
-    cursor: pointer;
-    z-index: 1;
-   
-  }
-  .menu_btn > span,
-  .menu_btn > span::before,
-  .menu_btn > span::after {
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 4px;
-    background-color: #616161;
-    transition-duration: .25s;
-  }
-  .menu_btn > span::before {
-    content: '';
-    top: -10px;
-  }
-  .menu_btn > span::after {
-    content: '';
-    top: 10px;
-  }
-  .menu_box {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 300px;
-    height: 100%;
-    margin: 0;
-    padding: 80px 0;
-    list-style: none;
-    background-color: #ECEFF1;
-    box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 40%);
-    transition-duration: .25s;
-  }
-  .menu_item {
-    display: block;
-    padding: 12px 24px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    transition-duration: .25s;
-    border-top: 2px solid rgba(128, 128, 128, 0.2);
-    text-align: center;
-    
-  }
-  .menu_item:hover {
-    background-color: #CFD8DC;
-  }
-  #last_element_menu_item{
-    border-bottom: 2px solid rgba(128, 128, 128, 0.2);
-  }
-  
+
+#menu_toggle {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+#menu_toggle:checked+.menu_btn {
+  transform: rotate(45deg);
+}
+
+#menu_toggle:checked+.menu_btn::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#menu_toggle:checked+.menu_btn::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu_toggle:checked~.menu_box {
+  right: -24px !important;
+}
+
+.menu_btn {
+  cursor: pointer;
+  //position: relative;
+  //z-index: 1;
+}
+
+.menu_btn,
+.menu_btn::before,
+.menu_btn::after {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background-color: #616161;
+  transition-duration: .25s;
+  z-index: 1;
+}
+
+.menu_btn::before {
+  content: '';
+  top: -10px;
+}
+
+.menu_btn::after {
+  content: '';
+  top: 10px;
+}
+
+.menu_box {
+  display: block;
+  position: absolute;
+  top: -92px;
+  right: -100vw;
+  width: 300px;
+  height: 100vh;
+  //margin: 0;
+  padding: 190px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 40%);
+  transition-duration: .25s;
+}
+
+.menu-collapsed {
+  padding: 147px 0;
+}
+
+.menu_item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+  border-top: 2px solid rgba(128, 128, 128, 0.2);
+  text-align: center;
+
+}
+
+.menu_item:hover {
+  background-color: #CFD8DC;
+}
+
+#last_element_menu_item {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+}
