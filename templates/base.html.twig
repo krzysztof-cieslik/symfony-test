@@ -16,6 +16,9 @@
         {% endblock %}
     </head>
     <body>
+        <div {{ react_component('Navigation-Bar') }}></div>
+        
         {% block body %}{% endblock %}
+         <div {{ react_component('Header') }}></div>
     </body>
 </html>
