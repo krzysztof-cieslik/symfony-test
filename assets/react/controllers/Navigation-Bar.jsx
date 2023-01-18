@@ -22,12 +22,12 @@ export default function (props) {
   }, []);
   return (
 
-    <div className="main-Container">
+    <div className="main-container">
 
       <div className="top-Navigation">
 
         <div className="logo">
-          <a href="#"><img className={`amp ${navbarImageCollapsed ? 'amp-collapsed' : ''}`} src={img} alt="John Leggy" /></a>
+          <a href="#"><img className={`amp ${navbarImageCollapsed ? 'amp-collapsed' : ''}`} src={img} alt="Grupa AMP Media" /></a>
         </div>
 
 
