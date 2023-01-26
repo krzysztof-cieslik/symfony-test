@@ -4,12 +4,13 @@ html {
   margin: 0;
   height: 150%;
   width: 100%;
+
 }
 .main-container{
   display: flex;
   height: 100%;
   width: 100%;
-
+  background-color:burlywood ;
 }
 
 .top-Navigation {
@@ -152,6 +153,36 @@ html {
 }
 
 .header-container {
+  width: 62%;
   font-family: 'Roboto', sans-serif;
-  margin: 280px 120px 0 120px;
+  margin: auto;
+  margin-top: 300px;
+  
 }
+.header-text{
+  padding-left: 30px;
+  color:white;
+  border-left:solid 10px white;
+}
+.top-button{
+  color:white;
+  margin-top: 20px;
+  border:solid white 2px;
+  background-color: burlywood;
+  font-size: 16px;
+  padding: 26px 36px;
+  font-weight: bold;
+  transition-duration: 0.25s;
+}
+.top-button:hover{
+color: #252525;
+background-color: white;
+}
+.fa-i{
+  margin: auto;
+  margin-top:100px;
+  color:white;
+  font-size: 50px;
+  display: flex;
+}
+
