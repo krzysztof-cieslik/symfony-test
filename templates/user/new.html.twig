@@ -9,15 +9,17 @@
         {{ form_errors(form) }}
     </div>
 
-<div class="row">
-        <div class="col">
-            {{ form_row(form.firstName) }}
+<div class="form-container">
+            <div class="form-header-text"><h1 style="margin-top: 0px;">CONTACT</h1></div>
+        <div class="">
+            {{form_row(form.firstName, {'attr': { 'class': 'form-input'}}) }}
         </div>
-        <div class="col" id="some-custom-id">
-            {{ form_row(form.lastName) }}
+        <div class="" id="some-custom-id">
+            {{ form_row(form.lastName, {'attr': { 'class': 'form-input'}}) }}
         </div>
+        {{ form_row(form.save, {'attr': { 'class': 'submit-form-button'}}) }}
     </div>
-    {{ form_row(form.save, {'attr': { 'class': 'btn btn-primary'}}) }}
+  
 
 </div>
 
