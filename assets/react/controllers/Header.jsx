@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiDownArrowAlt } from "react-icons/bi"
-
+import { Link } from "react-router-dom";
 
 export default function (props) {
     return <div className="main-container">
