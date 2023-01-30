@@ -23,3 +23,17 @@ import './bootstrap';
 // internal components won't be automatically included in your JS built file if
 // they are not necessary.
 registerReactControllerComponents(require.context('./react/controllers', true, /\.(j|t)sx?$/));
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./js/App";
+import { BrowserRouter } from "react-router-dom";
+
+ReactDOM.render(
+	
+		<React.StrictMode>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</React.StrictMode>,
+	document.getElementById("root")
+);

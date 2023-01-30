@@ -173,6 +173,8 @@ html {
   padding: 26px 36px;
   font-weight: bold;
   transition-duration: 0.25s;
+  text-decoration: none;
+  display: inline-block;
 }
 .top-button:hover{
 color: #252525;
@@ -204,23 +206,71 @@ background-color: white;
   border-bottom:solid white 2px ;
   width: 25%;
   margin-top: 40px;
+  text-align: center;
 }
 .form-input:hover{
     border-bottom: 2px solid grey;
 }
+.form-input:focus{
+  outline:none;
+}
+.form-input::placeholder{
+  color:white; 
+}
+.form-input:focus::placeholder {
+  color: transparent;
+}
+
 
 .submit-form-button{
   color:white;
-  margin-top: 20px;
+  margin-top: 30px;
   border:solid white 1px;
   background-color: burlywood;
   font-size: 16px;
   padding: 20px 32px;
   font-weight: bold;
   transition-duration: 0.25s;
+  
 }
 .submit-form-button:hover{
   color: #252525;
   background-color: white;
 }
+.container-03{
+  height: 500px;
+  width: 100%;
+  background-color: white;
+}
+.h1-03{
+  color: #4c4c4c;
+  font-size: 36px;
+  font-family: 'Roboto', sans-serif;
+  float:left;
+  margin-left: 270px;
+}
+.h2-03{
+  color: #4c4c4c;
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif;
+  float:left;
+  padding-top: 10px;
+  margin-left: 30px;
+  
+}
+.p-03{
+  color: #989494;;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  clear: both;
+  width: 50%;
+  word-spacing: 2px;
+  margin: auto;
+}
 
+
+hr{
+  background-color: grey;
+  width: 70%;
+  margin-top: 40px;
+}

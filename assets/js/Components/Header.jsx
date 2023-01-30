@@ -17,7 +17,8 @@ export default function (props) {
             </div>
 
             
-                <button className='top-button'>ASK FOR DETAILS</button><br></br>
+                <Link to="#" className='top-button'>ASK FOR DETAILS</Link><br></br>
+                
                 <BiDownArrowAlt className='fa-i'/>
                 
               
